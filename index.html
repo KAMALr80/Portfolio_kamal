@@ -142,7 +142,8 @@
               d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
           </svg>
         </a>
-        <a href="https://www.linkedin.com/in/kamalsinh-rathod-8605-in" target="_blank" class="text-gray-400 hover:text-white">
+        <a href="https://www.linkedin.com/in/kamalsinh-rathod-8605-in" target="_blank"
+          class="text-gray-400 hover:text-white">
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
             <path
               d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -158,7 +159,7 @@
     <div
       class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-12">
       <!-- Intro Text Column -->
-      <div class="lg:col-span-7 flex flex-col space-y-6 text-center lg:text-left">
+      <div class="lg:col-span-7 flex flex-col space-y-6 text-center lg:text-left reveal-on-scroll">
         <!-- Status Tag -->
         <div class="inline-flex items-center justify-center lg:justify-start">
           <span
@@ -216,15 +217,21 @@
         <!-- Mini Achievements -->
         <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/5 max-w-md mx-auto lg:mx-0">
           <div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-white">7.59</div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-white">
+              <span class="stat-counter" data-target="759" data-suffix="">7.59</span>
+            </div>
             <div class="text-xs text-gray-400">7th Sem CGPA</div>
           </div>
           <div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-white">4+</div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-white">
+              <span class="stat-counter" data-target="4" data-suffix="+">4+</span>
+            </div>
             <div class="text-xs text-gray-400">Professional Internships</div>
           </div>
           <div>
-            <div class="text-2xl sm:text-3xl font-extrabold text-white">5+</div>
+            <div class="text-2xl sm:text-3xl font-extrabold text-white">
+              <span class="stat-counter" data-target="5" data-suffix="+">5+</span>
+            </div>
             <div class="text-xs text-gray-400">Tech Frameworks</div>
           </div>
         </div>
@@ -263,18 +270,21 @@
             <div class="font-mono text-[9px] sm:text-xs text-indigo-300 space-y-2 select-none py-4 leading-relaxed">
               <p><span class="text-purple-400">namespace</span> <span class="text-gray-300">App\Http;</span></p>
               <p><span class="text-pink-400">class</span> <span class="text-cyan-300 font-semibold">Portfolio</span>
-                <span class="text-pink-400">extends</span> <span class="text-blue-300">Controller</span> {</p>
+                <span class="text-pink-400">extends</span> <span class="text-blue-300">Controller</span> {
+              </p>
               <p class="pl-4"><span class="text-pink-400">public function</span> <span
                   class="text-blue-400">show</span><span class="text-yellow-400">()</span> {</p>
               <p class="pl-8"><span class="text-pink-400">return</span> <span class="text-blue-300">view</span><span
                   class="text-yellow-400">(</span><span class="text-emerald-400">'portfolio'</span>, <span
                   class="text-pink-400">[</span></p>
               <p class="pl-12"><span class="text-indigo-200">'name'</span> <span class="text-pink-400">=&gt;</span>
-                <span class="text-emerald-400">'Kamalsinh Rathod'</span>,</p>
+                <span class="text-emerald-400">'Kamalsinh Rathod'</span>,
+              </p>
               <p class="pl-12"><span class="text-indigo-200">'stack'</span> <span class="text-pink-400">=&gt;</span>
                 <span class="text-pink-400">[</span><span class="text-emerald-400">'PHP'</span>, <span
                   class="text-emerald-400">'Laravel'</span>, <span class="text-emerald-400">'MySQL'</span><span
-                  class="text-pink-400">]</span></p>
+                  class="text-pink-400">]</span>
+              </p>
               <p class="pl-8 text-pink-400">]<span class="text-yellow-400">)</span>;</p>
               <p class="pl-4">}</p>
               <p>}</p>
@@ -677,8 +687,14 @@
                 </svg>
                 Enterprise System Architecture
               </span>
-              <span class="text-[10px] text-gray-500 font-sans cursor-help"
-                title="Database and credential access are restricted for security">Confidential Portal</span>
+              <a href="https://github.com/KAMALr80" target="_blank"
+                class="inline-flex items-center text-xs text-gray-400 hover:text-white transition-colors font-mono">
+                <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+                </svg>
+                GitHub
+              </a>
             </div>
           </div>
         </div>
@@ -805,6 +821,114 @@
   </section>
 
 
+  <!-- --- 4.5 WHAT I BUILD SECTION --- -->
+  <section class="py-20 relative reveal-on-scroll">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-sm font-bold tracking-wider text-brand-cyan uppercase mb-2">Core Capabilities</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">What I Build</p>
+        <p class="text-gray-400 mt-2">End-to-end solutions from database schemas to polished interfaces.</p>
+        <div class="w-12 h-1 bg-gradient-to-r from-brand-accent to-brand-cyan mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: ERP / Backend Systems -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 group flex flex-col space-y-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500/20 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-base font-extrabold text-white">ERP & Backend Systems</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Modular Laravel applications with RBAC, multi-tenant
+            databases, queue pipelines, and API-driven business logic.</p>
+          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-white/5">
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">Laravel</span>
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">PHP
+              8</span>
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Frontend Interfaces -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 group flex flex-col space-y-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500/20 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-extrabold text-white">Responsive Web Interfaces</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Pixel-perfect, mobile-first frontends with Tailwind
+            CSS, micro-animations, and seamless UX across all devices.</p>
+          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-white/5">
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">Tailwind</span>
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">Alpine.js</span>
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">JS
+              ES6+</span>
+          </div>
+        </div>
+
+        <!-- Card 3: API & Integrations -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 group flex flex-col space-y-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-400 group-hover:bg-pink-500/20 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-extrabold text-white">REST API & Integrations</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Third-party API bridges including WooCommerce sync,
+            Sanctum-authenticated endpoints, and real-time data pipelines.</p>
+          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-white/5">
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-pink-500/10 text-pink-300 border border-pink-500/20">Sanctum</span>
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-pink-500/10 text-pink-300 border border-pink-500/20">REST
+              API</span>
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-pink-500/10 text-pink-300 border border-pink-500/20">JSON</span>
+          </div>
+        </div>
+
+        <!-- Card 4: PDF & Reporting -->
+        <div class="glass-card rounded-2xl p-6 border border-white/5 group flex flex-col space-y-4">
+          <div
+            class="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-400 group-hover:bg-purple-500/20 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="text-base font-extrabold text-white">PDF Reports & Automation</h3>
+          <p class="text-sm text-gray-400 leading-relaxed flex-1">Dynamic invoice generation, barcode/QR slips, delivery
+            receipts, and automated reporting using DomPDF and jsPDF.</p>
+          <div class="flex flex-wrap gap-1.5 pt-2 border-t border-white/5">
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">DomPDF</span>
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">jsPDF</span>
+            <span
+              class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20">Barcode/QR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
   <!-- --- 5. INTERNSHIPS & EXPERIENCE SECTION --- -->
   <section id="experience" class="py-24 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -834,7 +958,7 @@
           <div class="pl-12 sm:pl-0 sm:text-right pr-0 sm:pr-10 order-1">
             <span
               class="inline-block px-3 py-1 text-xs font-bold font-mono text-brand-cyan bg-brand-cyan/10 rounded-full border border-brand-cyan/20 mb-2">
-              Jan 2026 - Apr 2026
+              Jan 2026 - Present
             </span>
             <h3 class="text-xl font-bold text-white">Software Engineer Intern</h3>
             <p class="text-indigo-400 font-mono text-sm font-medium mt-1">Brainbean Technolabs (ERP Dept)</p>
@@ -982,10 +1106,6 @@
                   class="px-2.5 py-1 text-[10px] font-mono font-bold bg-brand-cyan/10 text-brand-cyan rounded-full border border-brand-cyan/15">2022
                   - Pursuing</span>
               </div>
-              <p class="text-xs text-gray-400 leading-relaxed mb-3">
-                Acquiring robust foundational knowledge in Algorithm structures, Database architecture, Object-Oriented
-                paradigms, and system software engineering.
-              </p>
               <div class="flex items-center space-x-1">
                 <span class="text-xs text-gray-400">Current Standing:</span>
                 <span class="text-xs font-bold text-white font-mono bg-white/5 px-2 py-0.5 rounded">7th Sem (7.59
@@ -1130,7 +1250,8 @@
             <p class="text-indigo-400 font-mono text-sm mb-4">Lance Corporal (LCPL)</p>
             <p class="text-sm text-gray-400 leading-relaxed mb-4">
               Cultivated profound discipline, core leadership qualities, and patriotic community building. Honored to
-              represent the entire unit at the elite **EBSB Camp** (Ek Bharat Shreshtha Bharat) in Ahmedabad NCC HQ,
+              represent the entire unit at the elite <strong class="text-white">EBSB Camp</strong> (Ek Bharat Shreshtha
+              Bharat) in Ahmedabad NCC HQ,
               driving cultural integration.
             </p>
           </div>
@@ -1298,7 +1419,7 @@
             <!-- Web3Forms Access Key: Get a free key from https://web3forms.com to receive emails instantly -->
             <input type="hidden" name="access_key" value="45bdfb39-54f4-41ee-bd5f-a1755ff6b616">
             <!-- Web3Forms Redirect back to index.html -->
-            <input type="hidden" name="redirect" value="http://localhost:8080/index.html">
+            <input type="hidden" name="redirect" value="false">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <!-- Name Input -->
               <div class="space-y-1.5">
@@ -1345,18 +1466,59 @@
 
 
   <!-- --- FOOTER --- -->
-  <footer class="py-12 border-t border-white/5 relative z-10 bg-brand-darker">
-    <div
-      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-      <div>
-        <p class="text-sm font-bold text-white tracking-wide">Kamalsinh Rathod</p>
-        <p class="text-xs text-gray-500 mt-1">&copy; 2026. Custom Crafted with ❤️ & Tailwind CSS.</p>
-      </div>
-      <div class="flex space-x-6 text-sm font-medium font-mono text-gray-400">
-        <a href="#about" class="hover:text-white transition-colors">About</a>
-        <a href="#skills" class="hover:text-white transition-colors">Skills</a>
-        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
-        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+  <footer class="py-14 border-t border-white/5 relative z-10 bg-brand-darker">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+        <!-- Brand -->
+        <div>
+          <div class="flex items-center space-x-2 justify-center md:justify-start mb-2">
+            <div
+              class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-accent to-brand-cyan flex items-center justify-center font-bold text-white text-sm">
+              K</div>
+            <span class="font-bold text-white tracking-wide">Kamalsinh Rathod</span>
+          </div>
+          <p class="text-xs text-gray-500">B.E IT Student · Full Stack Developer · Gujarat, India</p>
+          <p class="text-xs text-gray-600 mt-1">&copy; 2026. Custom Crafted with ❤️ &amp; Tailwind CSS.</p>
+        </div>
+
+        <!-- Nav Links -->
+        <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium font-mono text-gray-400">
+          <a href="#about" class="hover:text-white transition-colors">About</a>
+          <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+          <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+          <a href="#education" class="hover:text-white transition-colors">Education</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </div>
+
+        <!-- Social & Resume -->
+        <div class="flex items-center space-x-3">
+          <a href="https://github.com/KAMALr80" target="_blank"
+            class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/kamalsinh-rathod-8605-in" target="_blank"
+            class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:bg-blue-500/20 hover:text-blue-400 transition-all">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="mailto:rathodkamal8605@gmail.com"
+            class="w-9 h-9 rounded-xl bg-white/5 flex items-center justify-center text-gray-400 hover:bg-brand-cyan/20 hover:text-brand-cyan transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+          <a href="resume.pdf" target="_blank"
+            class="px-4 py-2 rounded-xl bg-white/5 text-xs font-bold text-gray-300 hover:text-white hover:bg-white/10 border border-white/5 hover:border-white/15 transition-all font-mono">
+            Resume ↗
+          </a>
+        </div>
       </div>
     </div>
   </footer>

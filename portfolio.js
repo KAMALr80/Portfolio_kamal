@@ -30,19 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (!isDeleting && charIndex === currentWord.length) {
-      // Pause at full word
       typingSpeed = 2000;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       wordIndex = (wordIndex + 1) % words.length;
-      typingSpeed = 500; // Pause before starting next word
+      typingSpeed = 500;
     }
 
     setTimeout(type, typingSpeed);
   }
 
-  // Start typewriter
   if (typewriterElement) {
     setTimeout(type, 1000);
   }
@@ -69,15 +67,65 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // --- 3. Animate Skill Progress Bars ---
-  const progressFills = document.querySelectorAll('.progress-fill');
-  progressFills.forEach(fill => {
-    const percentage = fill.getAttribute('data-percent');
-    fill.style.width = `${percentage}%`;
+  // --- 3. Scroll Reveal via IntersectionObserver ---
+  // Mark body as JS-ready so CSS can safely hide elements for animation
+  document.body.classList.add('js-reveal-ready');
+
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger siblings slightly
+        const delay = entry.target.dataset.revealDelay || 0;
+        setTimeout(() => {
+          entry.target.classList.add('is-visible');
+          // Animate progress bars inside this element
+          entry.target.querySelectorAll('.progress-fill').forEach(fill => {
+            const pct = fill.getAttribute('data-percent');
+            fill.style.width = `${pct}%`;
+          });
+          // Trigger stat counters inside this element
+          entry.target.querySelectorAll('.stat-counter').forEach(el => {
+            animateCounter(el);
+          });
+        }, delay);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // Also reveal hero immediately (above the fold)
+  document.querySelectorAll('#hero .reveal-on-scroll').forEach(el => {
+    el.classList.add('is-visible');
+    el.querySelectorAll('.progress-fill').forEach(fill => {
+      fill.style.width = `${fill.getAttribute('data-percent')}%`;
+    });
+    el.querySelectorAll('.stat-counter').forEach(el => animateCounter(el));
   });
 
 
-  // --- 4. Scroll Spy: Active Navigation Links ---
+  // --- 4. Animated Stat Counter ---
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const duration = 1400;
+    const start = performance.now();
+    const suffix = el.getAttribute('data-suffix') || '';
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  }
+
+
+  // --- 5. Scroll Spy: Active Navigation Links ---
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -86,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120; // offset for sticky header
+      const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute('id');
 
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -103,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', scrollSpy);
 
 
-  // --- 5. Contact Form AJAX Handler ---
+  // --- 6. Contact Form AJAX Handler ---
   const contactForm = document.getElementById('contact-form');
   const formSubmitBtn = document.getElementById('form-submit-btn');
   const toastNotification = document.getElementById('toast-notification');
@@ -112,21 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Look for the hidden access key input
       const accessKeyInput = contactForm.querySelector('input[name="access_key"]');
       const accessKey = accessKeyInput ? accessKeyInput.value : '';
 
-      // Check if access key has been configured by the user
       if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
-        showToast(
-          "Config Required!", 
-          "Please configure your Web3Forms Access Key inside index.html to start receiving emails.", 
-          true
-        );
+        showToast("Config Required!", "Please configure your Web3Forms Access Key inside index.html to start receiving emails.", true);
         return;
       }
 
-      // Show sending state
       const originalBtnContent = formSubmitBtn.innerHTML;
       formSubmitBtn.disabled = true;
       formSubmitBtn.innerHTML = `
@@ -137,10 +178,8 @@ document.addEventListener('DOMContentLoaded', () => {
         Sending Message...
       `;
 
-      // Use native FormData to package form values automatically
       const formData = new FormData(contactForm);
 
-      // Web3Forms AJAX POST
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData
@@ -148,26 +187,14 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(async (response) => {
         const data = await response.json();
         if (response.status === 200) {
-          showToast(
-            "Message Sent!", 
-            "Thank you! Your message has been sent successfully.", 
-            false
-          );
+          showToast("Message Sent!", "Thank you! Your message has been sent successfully.", false);
           contactForm.reset();
         } else {
-          showToast(
-            "Send Failed!", 
-            data.message || "An error occurred. Please verify your Access Key.", 
-            true
-          );
+          showToast("Send Failed!", data.message || "An error occurred. Please verify your Access Key.", true);
         }
       })
-      .catch((error) => {
-        showToast(
-          "Connection Error!", 
-          "Failed to contact the server. Please check your internet connection.", 
-          true
-        );
+      .catch(() => {
+        showToast("Connection Error!", "Failed to contact the server. Please check your internet connection.", true);
       })
       .finally(() => {
         formSubmitBtn.disabled = false;
@@ -179,20 +206,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function showToast(title, message, isError = false) {
     if (!toastNotification) return;
 
-    // Grab elements inside the toast container
     const titleEl = toastNotification.querySelector('.ml-3 p:first-child');
     const msgEl = toastNotification.querySelector('.ml-3 p:last-child');
     const iconContainer = toastNotification.querySelector('.flex-shrink-0');
 
-    // Set custom text
     if (titleEl) titleEl.textContent = title;
     if (msgEl) msgEl.textContent = message;
 
-    // Dynamically adjust borders, shadows, and icons depending on error states
     if (isError) {
       toastNotification.classList.remove('border-emerald-500/30', 'shadow-emerald-500/10');
       toastNotification.classList.add('border-red-500/30', 'shadow-red-500/10');
-      
       if (iconContainer) {
         iconContainer.className = "flex-shrink-0 w-8 h-8 rounded-lg bg-red-500/15 flex items-center justify-center text-red-400";
         iconContainer.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>`;
@@ -200,25 +223,21 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       toastNotification.classList.remove('border-red-500/30', 'shadow-red-500/10');
       toastNotification.classList.add('border-emerald-500/30', 'shadow-emerald-500/10');
-      
       if (iconContainer) {
         iconContainer.className = "flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-400";
         iconContainer.innerHTML = `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
       }
     }
 
-    // Slide in toast
     toastNotification.classList.remove('translate-y-24', 'opacity-0');
     toastNotification.classList.add('translate-y-0', 'opacity-100');
 
-    // Auto hide toast after 5 seconds
     setTimeout(() => {
       toastNotification.classList.remove('translate-y-0', 'opacity-100');
       toastNotification.classList.add('translate-y-24', 'opacity-0');
     }, 5000);
   }
 
-  // Close toast button
   const closeToastBtn = document.getElementById('close-toast-btn');
   if (closeToastBtn && toastNotification) {
     closeToastBtn.addEventListener('click', () => {
@@ -226,4 +245,4 @@ document.addEventListener('DOMContentLoaded', () => {
       toastNotification.classList.add('translate-y-24', 'opacity-0');
     });
   }
-});
+})
