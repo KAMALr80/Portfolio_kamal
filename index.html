@@ -239,7 +239,7 @@
 
       <!-- Hero Visual Column -->
       <div class="lg:col-span-5 flex justify-center relative reveal-on-scroll">
-        <div class="relative w-72 h-72 sm:w-96 sm:h-96">
+        <div class="relative w-60 h-60 min-[400px]:w-72 min-[400px]:h-72 sm:w-96 sm:h-96">
           <!-- Main Glowing Circle Frame -->
           <div
             class="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-accent via-brand-purple to-brand-cyan opacity-20 blur-2xl animate-pulse">
@@ -257,17 +257,17 @@
 
           <!-- Central Graphic Card (Visual representation of code architecture) -->
           <div
-            class="absolute inset-8 sm:inset-12 lg:inset-14 glass-card rounded-3xl p-5 flex flex-col justify-between border border-white/10 shadow-2xl shadow-indigo-500/5 animate-float-slow">
-            <div class="flex items-center justify-between border-b border-white/5 pb-3">
+            class="absolute inset-4 min-[400px]:inset-8 sm:inset-12 lg:inset-14 glass-card rounded-3xl p-3.5 sm:p-5 flex flex-col justify-between border border-white/10 shadow-2xl shadow-indigo-500/5 animate-float-slow overflow-hidden">
+            <div class="flex items-center justify-between border-b border-white/5 pb-2 sm:pb-3">
               <div class="flex space-x-1.5">
-                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500/80"></span>
               </div>
-              <span class="text-xs font-mono text-cyan-400 font-semibold tracking-wide">laravel_app.php</span>
+              <span class="text-[10px] sm:text-xs font-mono text-cyan-400 font-semibold tracking-wide">laravel_app.php</span>
             </div>
 
-            <div class="font-mono text-[9px] sm:text-xs text-indigo-300 space-y-2 select-none py-4 leading-relaxed">
+            <div class="font-mono text-[8px] min-[400px]:text-[9px] sm:text-xs text-indigo-300 space-y-1 sm:space-y-2 select-none py-2 sm:py-4 leading-relaxed overflow-x-auto">
               <p><span class="text-purple-400">namespace</span> <span class="text-gray-300">App\Http;</span></p>
               <p><span class="text-pink-400">class</span> <span class="text-cyan-300 font-semibold">Portfolio</span>
                 <span class="text-pink-400">extends</span> <span class="text-blue-300">Controller</span> {
@@ -305,7 +305,7 @@
 
 
   <!-- --- 2. ABOUT ME SECTION --- -->
-  <section id="about" class="py-24 relative reveal-on-scroll">
+  <section id="about" class="py-16 sm:py-24 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -356,23 +356,23 @@
           </p>
 
           <!-- Core details table -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 font-mono text-sm border-t border-white/5">
-            <div class="flex space-x-2.5">
-              <span class="text-brand-cyan">Email:</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 font-mono text-xs sm:text-sm border-t border-white/5">
+            <div class="flex space-x-2 sm:space-x-2.5 overflow-hidden">
+              <span class="text-brand-cyan flex-shrink-0">Email:</span>
               <a href="mailto:rathodkamal8605@gmail.com"
-                class="text-gray-300 hover:text-brand-cyan transition-colors">rathodkamal8605@gmail.com</a>
+                class="text-gray-300 hover:text-brand-cyan transition-colors truncate">rathodkamal8605@gmail.com</a>
             </div>
-            <div class="flex space-x-2.5">
-              <span class="text-brand-cyan">Phone:</span>
+            <div class="flex space-x-2 sm:space-x-2.5">
+              <span class="text-brand-cyan flex-shrink-0">Phone:</span>
               <a href="tel:9904715247" class="text-gray-300 hover:text-brand-cyan transition-colors">9904715247</a>
             </div>
-            <div class="flex space-x-2.5">
-              <span class="text-brand-cyan">Address:</span>
-              <span class="text-gray-300">Balasinor, Gujarat</span>
+            <div class="flex space-x-2 sm:space-x-2.5">
+              <span class="text-brand-cyan flex-shrink-0">Address:</span>
+              <span class="text-gray-300 truncate">Balasinor, Gujarat</span>
             </div>
-            <div class="flex space-x-2.5">
-              <span class="text-brand-cyan">Languages:</span>
-              <span class="text-gray-300">English, Hindi, Gujarati</span>
+            <div class="flex space-x-2 sm:space-x-2.5">
+              <span class="text-brand-cyan flex-shrink-0">Languages:</span>
+              <span class="text-gray-300 truncate">English, Hindi, Gujarati</span>
             </div>
           </div>
         </div>
@@ -382,7 +382,7 @@
 
 
   <!-- --- 3. SKILLS SECTION --- -->
-  <section id="skills" class="py-24 relative reveal-on-scroll">
+  <section id="skills" class="py-16 sm:py-24 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -606,7 +606,7 @@
 
 
   <!-- --- 4. PROJECTS SECTION --- -->
-  <section id="projects" class="py-24 relative reveal-on-scroll">
+  <section id="projects" class="py-16 sm:py-24 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -822,16 +822,16 @@
 
 
   <!-- --- 4.5 WHAT I BUILD SECTION --- -->
-  <section class="py-20 relative reveal-on-scroll">
+  <section class="py-16 sm:py-20 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
         <h2 class="text-sm font-bold tracking-wider text-brand-cyan uppercase mb-2">Core Capabilities</h2>
         <p class="text-3xl sm:text-4xl font-extrabold tracking-tight">What I Build</p>
         <p class="text-gray-400 mt-2">End-to-end solutions from database schemas to polished interfaces.</p>
         <div class="w-12 h-1 bg-gradient-to-r from-brand-accent to-brand-cyan mx-auto mt-4 rounded-full"></div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
 
         <!-- Card 1: ERP / Backend Systems -->
         <div class="glass-card rounded-2xl p-6 border border-white/5 group flex flex-col space-y-4">
@@ -930,7 +930,7 @@
 
 
   <!-- --- 5. INTERNSHIPS & EXPERIENCE SECTION --- -->
-  <section id="experience" class="py-24 relative reveal-on-scroll">
+  <section id="experience" class="py-16 sm:py-24 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -944,18 +944,18 @@
       <div class="relative max-w-3xl mx-auto">
         <!-- Vertical Thread Line -->
         <div
-          class="absolute left-4 sm:left-1/2 top-2 bottom-2 w-0.5 bg-gradient-to-b from-indigo-500 via-cyan-500 to-indigo-500 opacity-20 transform -translate-x-1/2">
+          class="absolute left-3 sm:left-1/2 top-2 bottom-2 w-0.5 bg-gradient-to-b from-indigo-500 via-cyan-500 to-indigo-500 opacity-20 transform -translate-x-1/2">
         </div>
 
         <!-- Internship 1: Brainbean Technolabs -->
-        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-x-12 lg:gap-x-20 mb-12">
+        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-6 sm:gap-x-12 lg:gap-x-20 mb-12">
           <!-- Dot Locator -->
           <div
-            class="absolute left-4 sm:left-1/2 top-6 w-3.5 h-3.5 rounded-full bg-brand-cyan border border-brand-dark transform -translate-x-1/2 z-10 timeline-dot">
+            class="absolute left-3 sm:left-1/2 top-6 w-3.5 h-3.5 rounded-full bg-brand-cyan border border-brand-dark transform -translate-x-1/2 z-10 timeline-dot">
           </div>
 
           <!-- Content Left Side (For desktop) -->
-          <div class="pl-12 sm:pl-0 sm:text-right pr-0 sm:pr-10 order-1">
+          <div class="pl-8 sm:pl-0 sm:text-right pr-0 sm:pr-10 order-1">
             <span
               class="inline-block px-3 py-1 text-xs font-bold font-mono text-brand-cyan bg-brand-cyan/10 rounded-full border border-brand-cyan/20 mb-2">
               Jan 2026 - Present
@@ -964,7 +964,7 @@
             <p class="text-indigo-400 font-mono text-sm font-medium mt-1">Brainbean Technolabs (ERP Dept)</p>
           </div>
           <!-- Content Right Side -->
-          <div class="pl-12 sm:pl-10 order-2">
+          <div class="pl-8 sm:pl-10 order-2">
             <div class="glass-card p-5 rounded-2xl border border-white/5">
               <ul class="space-y-2 text-sm text-gray-400 list-disc list-inside">
                 <li>Contributed to backend & module engineering inside production ERP suites.</li>
@@ -976,14 +976,14 @@
         </div>
 
         <!-- Internship 2: Spark To Ideas -->
-        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-x-12 lg:gap-x-20 mb-12">
+        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-6 sm:gap-x-12 lg:gap-x-20 mb-12">
           <!-- Dot Locator -->
           <div
-            class="absolute left-4 sm:left-1/2 top-6 w-3.5 h-3.5 rounded-full bg-brand-accent border border-brand-dark transform -translate-x-1/2 z-10 timeline-dot">
+            class="absolute left-3 sm:left-1/2 top-6 w-3.5 h-3.5 rounded-full bg-brand-accent border border-brand-dark transform -translate-x-1/2 z-10 timeline-dot">
           </div>
 
           <!-- Content Left (Offset for timeline alignment - Card first on desktop) -->
-          <div class="pl-12 sm:pl-0 sm:pr-10 order-2 sm:order-1">
+          <div class="pl-8 sm:pl-0 sm:pr-10 order-2 sm:order-1">
             <div class="glass-card p-5 rounded-2xl border border-white/5">
               <ul class="space-y-2 text-sm text-gray-400 list-disc list-inside">
                 <li>Designed high-fidelity, responsive frontend views using CSS & modern layouts.</li>
@@ -994,7 +994,7 @@
           </div>
 
           <!-- Content Right (Job info second on desktop) -->
-          <div class="pl-12 sm:pl-10 sm:text-left order-1 sm:order-2">
+          <div class="pl-8 sm:pl-10 sm:text-left order-1 sm:order-2">
             <span
               class="inline-block px-3 py-1 text-xs font-bold font-mono text-brand-accent bg-brand-accent/10 rounded-full border border-brand-accent/20 mb-2">
               Oct 2025
@@ -1005,14 +1005,14 @@
         </div>
 
         <!-- Internship 3: Infinite Craze Games -->
-        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-x-12 lg:gap-x-20 mb-12">
+        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-6 sm:gap-x-12 lg:gap-x-20 mb-12">
           <!-- Dot Locator -->
           <div
-            class="absolute left-4 sm:left-1/2 top-6 w-3.5 h-3.5 rounded-full bg-brand-cyan border border-brand-dark transform -translate-x-1/2 z-10 timeline-dot">
+            class="absolute left-3 sm:left-1/2 top-6 w-3.5 h-3.5 rounded-full bg-brand-cyan border border-brand-dark transform -translate-x-1/2 z-10 timeline-dot">
           </div>
 
           <!-- Content Left Side (For desktop) -->
-          <div class="pl-12 sm:pl-0 sm:text-right pr-0 sm:pr-10 order-1">
+          <div class="pl-8 sm:pl-0 sm:text-right pr-0 sm:pr-10 order-1">
             <span
               class="inline-block px-3 py-1 text-xs font-bold font-mono text-brand-cyan bg-brand-cyan/10 rounded-full border border-brand-cyan/20 mb-2">
               Jun 2025 - Jul 2025
@@ -1021,7 +1021,7 @@
             <p class="text-indigo-400 font-mono text-sm font-medium mt-1">Infinite Craze Games, Surat</p>
           </div>
           <!-- Content Right Side -->
-          <div class="pl-12 sm:pl-10 order-2">
+          <div class="pl-8 sm:pl-10 order-2">
             <div class="glass-card p-5 rounded-2xl border border-white/5">
               <ul class="space-y-2 text-sm text-gray-400 list-disc list-inside">
                 <li>Collaborated on building active UI layouts for interactive web modules.</li>
@@ -1033,14 +1033,14 @@
         </div>
 
         <!-- Internship 4: Motion Cut -->
-        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-y-6 sm:gap-x-12 lg:gap-x-20 mb-4">
+        <div class="relative grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-y-6 sm:gap-x-12 lg:gap-x-20 mb-4">
           <!-- Dot Locator -->
           <div
-            class="absolute left-4 sm:left-1/2 top-6 w-3.5 h-3.5 rounded-full bg-brand-accent border border-brand-dark transform -translate-x-1/2 z-10 timeline-dot">
+            class="absolute left-3 sm:left-1/2 top-6 w-3.5 h-3.5 rounded-full bg-brand-accent border border-brand-dark transform -translate-x-1/2 z-10 timeline-dot">
           </div>
 
           <!-- Content Left (Offset for timeline alignment - Card first on desktop) -->
-          <div class="pl-12 sm:pl-0 sm:pr-10 order-2 sm:order-1">
+          <div class="pl-8 sm:pl-0 sm:pr-10 order-2 sm:order-1">
             <div class="glass-card p-5 rounded-2xl border border-white/5">
               <ul class="space-y-2 text-sm text-gray-400 list-disc list-inside">
                 <li>Developed modular layouts and responsive design features using core web principles.</li>
@@ -1051,7 +1051,7 @@
           </div>
 
           <!-- Content Right (Job info second on desktop) -->
-          <div class="pl-12 sm:pl-10 sm:text-left order-1 sm:order-2">
+          <div class="pl-8 sm:pl-10 sm:text-left order-1 sm:order-2">
             <span
               class="inline-block px-3 py-1 text-xs font-bold font-mono text-brand-accent bg-brand-accent/10 rounded-full border border-brand-accent/20 mb-2">
               Jan 2025 - Feb 2025
@@ -1067,7 +1067,7 @@
 
 
   <!-- --- 6. EDUCATION & CERTIFICATIONS --- -->
-  <section id="education" class="py-24 relative reveal-on-scroll">
+  <section id="education" class="py-16 sm:py-24 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -1097,16 +1097,16 @@
               <div
                 class="absolute top-0 right-0 h-24 w-24 bg-brand-cyan/5 rounded-full blur-xl group-hover:bg-brand-cyan/10 transition-colors">
               </div>
-              <div class="flex justify-between items-start mb-3">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
                 <div>
                   <h4 class="font-extrabold text-white text-base">B.E in Information Technology</h4>
                   <p class="text-indigo-400 text-sm mt-0.5">Sardar Patel College of Engineering and Technology</p>
                 </div>
                 <span
-                  class="px-2.5 py-1 text-[10px] font-mono font-bold bg-brand-cyan/10 text-brand-cyan rounded-full border border-brand-cyan/15">2022
+                  class="w-fit px-2.5 py-1 text-[10px] font-mono font-bold bg-brand-cyan/10 text-brand-cyan rounded-full border border-brand-cyan/15">2022
                   - Pursuing</span>
               </div>
-              <div class="flex items-center space-x-1">
+              <div class="flex flex-wrap items-center gap-1.5 mt-2">
                 <span class="text-xs text-gray-400">Current Standing:</span>
                 <span class="text-xs font-bold text-white font-mono bg-white/5 px-2 py-0.5 rounded">7th Sem (7.59
                   CGPA)</span>
@@ -1115,16 +1115,16 @@
 
             <!-- Inst 2: Class 12 -->
             <div class="glass-card p-6 rounded-2xl border border-white/5 relative overflow-hidden group">
-              <div class="flex justify-between items-start mb-3">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
                 <div>
                   <h4 class="font-bold text-white text-base">Higher Secondary School (Class 12)</h4>
                   <p class="text-indigo-400 text-sm mt-0.5">Navgujarat Sec/ Higher Sec. School, Balasinor</p>
                 </div>
                 <span
-                  class="px-2.5 py-1 text-[10px] font-mono font-bold bg-white/5 text-gray-400 rounded-full border border-white/5">2021
+                  class="w-fit px-2.5 py-1 text-[10px] font-mono font-bold bg-white/5 text-gray-400 rounded-full border border-white/5">2021
                   - 2022</span>
               </div>
-              <div class="flex items-center space-x-1">
+              <div class="flex flex-wrap items-center gap-1.5 mt-2">
                 <span class="text-xs text-gray-400">Result Standing:</span>
                 <span class="text-xs font-bold text-white font-mono bg-white/5 px-2 py-0.5 rounded">Percentage:
                   49%</span>
@@ -1133,13 +1133,13 @@
 
             <!-- Inst 3: Class 10 -->
             <div class="glass-card p-6 rounded-2xl border border-white/5 relative overflow-hidden group">
-              <div class="flex justify-between items-start mb-3">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-3">
                 <div>
                   <h4 class="font-bold text-white text-base">Secondary School (Class 10)</h4>
                   <p class="text-indigo-400 text-sm mt-0.5">Navgujarat Sec/ Higher Sec. School, Balasinor</p>
                 </div>
                 <span
-                  class="px-2.5 py-1 text-[10px] font-mono font-bold bg-white/5 text-gray-400 rounded-full border border-white/5">2019
+                  class="w-fit px-2.5 py-1 text-[10px] font-mono font-bold bg-white/5 text-gray-400 rounded-full border border-white/5">2019
                   - 2020</span>
               </div>
               <div class="flex items-center space-x-1">
@@ -1221,7 +1221,7 @@
 
 
   <!-- --- 7. EXTRA CURRICULAR ACTIVITIES / VOLUNTEER WORK --- -->
-  <section id="activities" class="py-24 relative reveal-on-scroll">
+  <section id="activities" class="py-16 sm:py-24 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -1334,7 +1334,7 @@
 
 
   <!-- --- 8. CONTACT SECTION --- -->
-  <section id="contact" class="py-24 relative reveal-on-scroll">
+  <section id="contact" class="py-16 sm:py-24 relative reveal-on-scroll">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -1415,7 +1415,7 @@
         <!-- Form Column -->
         <div class="lg:col-span-7">
           <form action="https://api.web3forms.com/submit" method="POST" id="contact-form"
-            class="glass-card p-8 rounded-3xl border border-white/5 space-y-6">
+            class="glass-card p-5 sm:p-8 rounded-3xl border border-white/5 space-y-6">
             <!-- Web3Forms Access Key: Get a free key from https://web3forms.com to receive emails instantly -->
             <input type="hidden" name="access_key" value="45bdfb39-54f4-41ee-bd5f-a1755ff6b616">
             <!-- Web3Forms Redirect back to index.html -->
